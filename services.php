@@ -156,6 +156,27 @@ if($action == 'verifyemail') {
 
 			} 
 		}
-		
-		
+
+if($action == 'edit_profile') {
+    echo "starting update";
+    if(isset($_POST['name']) && !empty($_POST['name']) AND isset($_POST['about']) && !empty($_POST['about']) AND isset($_POST['email']) && !empty($_POST['email'])){
+        echo "Rule passed";
+        $name = $_POST['name'];
+        $about = $_POST['about'];
+        $email = $_POST['email'];
+        $sql = "UPDATE users SET username='".$name."', about='".$about."' WHERE email='".$email."'";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Updated successfully";
+        } else {
+            echo "Error updating: " . $conn->error;
+        }
+
+        $conn->close();
+    }
+    else {
+        echo json_encode ("Please fill all the information");
+
+    }
+}
 		?>

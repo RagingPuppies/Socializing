@@ -1,16 +1,7 @@
 <?php include "base.php"; ?>
 <?php include "head.php"; ?>
 <script src="static/js/main.js"></script>
-<script src="static/js/kms-rec.js"></script>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/demo-console/index.js"></script>
-<script src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
-<script src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
-<script src="bower_components/adapter.js/adapter.js"></script>
-<script src="bower_components/kurento-client/js/kurento-client.js"></script>
-<script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
 
 <?php
 header('Access-Control-Allow-Origin: *');
@@ -23,6 +14,7 @@ if(isset($_COOKIE['keepmesigned'])) {
 		$_SESSION['username'] = $array['username'];
         $_SESSION['email'] =  $array['email'];
         $_SESSION['LoggedIn'] = 1;
+		
 		
     }
 }

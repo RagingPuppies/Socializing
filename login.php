@@ -13,6 +13,7 @@ if(isset($_COOKIE['keepmesigned'])) {
         $_SESSION['email'] =  $array['email'];
         $_SESSION['LoggedIn'] = 1;
 		
+		
     }
 }
 

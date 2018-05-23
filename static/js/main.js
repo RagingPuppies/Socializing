@@ -55,6 +55,35 @@ function Register(name, email, pass) {
     });
 }
 
+function edit_profile_button() {
+    var name = document.getElementById("edit-name").value;
+    var about = document.getElementById("edit-about").value;
+    var email = document.getElementById("edit-email").value;
+    Post_edit_profile(name,about,email);
+}
+
+function Post_edit_profile(name, about, email) {
+    $.ajax({
+        url: 'services.php',
+        type: 'POST',
+        data: {
+            'action': 'edit_profile',
+            'name': name,
+            'about': about,
+            'email': email
+        },
+        success: function (response) {
+            if(response && response.length) {
+                for(var i=0; i<response.length; i++) {
+                    var div = document.getElementById('edit-err');
+                    div.innerHTML = response;
+                }
+            }
+        },
+        dataType: 'json'
+    });
+}
+
 function signin_button() {
 	var email = document.getElementById("sign-email").value;
 	var pass = document.getElementById("sign-pass").value;
@@ -85,6 +114,10 @@ function Signin(email, pass, keepme) {
             },
         dataType: 'json'
     });
+}
+
+function visbility(object) {
+    document.getElementById(object).style.display = "block";
 }
 
 function reset_button() {

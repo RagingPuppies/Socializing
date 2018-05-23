@@ -122,6 +122,22 @@ footer {
 	border-radius: 5px;
 }
 
+#profile {
+	background-color: #f2f1f1;
+    border-radius: 15px;
+    width: 70%;
+    margin: 25px;
+    padding: 25px;
+}
+
+#skills {
+	background-color: #6464a1;
+    border-radius: 15px;
+    width: 70%;
+    margin: 25px;
+    padding: 25px;
+}
+
 #player-buttons {
 	margin: 0 auto;
 	height: 50px;
@@ -389,6 +405,14 @@ footer {
 .img-button:hover {
 	background-color: #fff9bf;
 }
+textarea {
+	border: solid 0.5px #6464a1;
+	border-radius: 3px;
+	padding: 10px;
+	padding-right: 75px;
+	margin-top:20px
+
+}
 
 .input {
 	border: solid 0.5px #6464a1;
@@ -396,6 +420,17 @@ footer {
     padding: 10px;
     padding-right: 75px;
 	margin-top:20px
+}
+
+.input-big {
+	border: solid 0.5px #6464a1;
+	border-radius: 3px;
+	padding: 10px;
+	padding-right: 75px;
+	margin-top:20px;
+	width: 300px;
+	height: 300px;
+	word-break: break-word;
 }
 
 
